@@ -1,0 +1,11 @@
+services:
+  banco:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: db_teste_dio
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=RootRoot98*
+    ports:
+      - 1433:1433
+
+# docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=yourStrong(!)Password" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
